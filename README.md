@@ -1,4 +1,4 @@
-# MetroCrowd
+# MetroCrowd Client
 ---  
 
 ### Introdcution
@@ -55,6 +55,11 @@ npm run build
 ```
 npm run lint
 ```
+### Server API Document
+
+Server端API的相關說明文件  
+放在[/docs/api.md](/docs/api.md)  
+內容包含API的用途、Request/Response格式、範例
 
 ### Note
 
