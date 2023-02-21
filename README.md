@@ -10,13 +10,13 @@
 
 不過由於台北捷運App的操作介面用起來不太直覺  
 為了讓大家查詢上能更方便、更直覺一些  
-我把上述的功能做成了網頁版給大家使用，叫做「[捷報](https://metrocrowd.online/)」  
+我把上述的功能做成了網頁版給大家使用，叫做「[捷報](https://metrocrowd.netlify.app/)」  
 希望也能透過自己的力量，為台灣的防疫盡一份心力💪  
 不過因為台北捷運目前只有提供藍線的資料，所以捷報目前也只支援藍線👍
 
 目前服務已經於2020/05/13上線哩🎉🎉🎉  
-有需要的朋友可以點[這裡](https://metrocrowd.online/)用用看  
-有任何回饋或是問題，都歡迎透過網頁內的連結，填寫表單告訴我喔！  
+有需要的朋友可以點[這裡](https://metrocrowd.netlify.app/)用用看  
+有任何回饋或是問題，都歡迎透過網頁內的email和我聯繫！  
 
 ## Project setup
 
@@ -40,6 +40,8 @@ npm install
 | Name        | Value           |
 | ------------- |:-------------:|
 | `VUE_APP_GA_ID` | UA-XXXXX-Y | 
+
+ps. 由於2023/02/21時已經移除捷報的GA code，因此不再需要VUE_APP_GA_ID這個環境變數
 
 ### Compiles and hot-reloads for development
 ```
