@@ -1,7 +1,9 @@
 # MetroCrowd Client
----  
 
-### Introdcution
+## Introduction
+
+#### [2020/05/13] New Service Online
+
 因為疫情的關係，2020/05/08的時候  
 台北捷運在App中推出了[查詢「車廂擁擠度」的功能](https://www.bnext.com.tw/article/57610/mrt-app)   
 讓大家能知道各列車上哪些車廂人比較多  
@@ -17,6 +19,11 @@
 目前服務已經於2020/05/13上線哩🎉🎉🎉  
 有需要的朋友可以點[這裡](https://metrocrowd.netlify.app/)用用看  
 有任何回饋或是問題，都歡迎透過網頁內的email和我聯繫！  
+
+#### [2023/03/21] Service Termination 
+
+隨著台灣的疫情逐步趨緩、Covid19流感化，捷報也於今天正式走入歷史  
+未來我不會再進行任何更新與維護啦，希望捷報在這3年中有幫助到大家！
 
 ## Project setup
 
@@ -41,7 +48,7 @@ npm install
 | ------------- |:-------------:|
 | `VUE_APP_GA_ID` | UA-XXXXX-Y | 
 
-ps. 由於2023/02/21時已經移除捷報的GA code，因此不再需要VUE_APP_GA_ID這個環境變數
+ps. 由於2023/02/21時已經移除捷報的GA code，因此不再需要`VUE_APP_GA_ID`這個環境變數
 
 ### Compiles and hot-reloads for development
 ```
