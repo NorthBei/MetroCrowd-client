@@ -120,10 +120,6 @@
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 import Cart from '@/components/Cart'
-import { detect } from 'detect-browser'
-
-const browser = detect()
-const browserInfo = browser ? `${browser.os}, ${browser.name}, ${browser.version}` : 'None'
 
 const stations = {
   BL01: '頂埔',
@@ -188,15 +184,11 @@ export default {
       { text: 'BL23 南港展覽館', value: '031' }
     ]
   }),
-  created () {
-    this.$ga.page('/')
-  },
   watch: {
     async stationCode (newV) {
       this.train = null
       this.setTrainListEmpty()
       this.setTrainDataEmpty()
-      this.recordEvent('station', this.seclectedStationName)
       this.getTrainList(newV)
       if (this.$refs.countdown) this.$refs.countdown.pauseCountdown()
     }
@@ -211,10 +203,6 @@ export default {
     async selectTrain (train) {
       this.train = train
       const trainId = train.tripno.trim()
-      if (trainId !== '') {
-        this.recordEvent('train', `從${this.seclectedStationName}往${train.destination}`)
-        this.recordEvent('way', `往${train.destination}`)
-      }
       await this.getTrainData(trainId)
     },
     async updateAllData () {
@@ -226,13 +214,6 @@ export default {
     },
     mapStationIdToName (stationId) {
       return stations[stationId]
-    },
-    recordEvent (category, acton) {
-      this.$ga.event({
-        eventCategory: category,
-        eventAction: acton,
-        eventLabel: browserInfo
-      })
     }
   },
   computed: {
