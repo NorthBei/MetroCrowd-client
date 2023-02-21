@@ -29,8 +29,8 @@
 
 ### Development Environment
 **Execute environment：**
-- Node version: v10.15.3
-- NPM version: v6.14.5
+- Node version: v16.16.0
+- NPM version: v8.13.2
 
 **Dependency install：**
 ```bash
