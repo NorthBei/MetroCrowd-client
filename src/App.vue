@@ -4,9 +4,6 @@
       <v-app-bar color="white" flat app>
         <v-toolbar-title>捷報</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn :href="formUrl" target="_blank" icon large>
-          <v-icon>mdi-file-document-edit-outline</v-icon>
-        </v-btn>
         <v-btn @click="dialog.email = true" icon large>
           <v-icon>mdi-email-outline</v-icon>
         </v-btn>
@@ -87,13 +84,16 @@
       <v-card>
         <v-card-title>捷報</v-card-title>
         <v-card-text>
-          <p>5/8時，台北捷運在App中推出了查詢「車廂擁擠度」的功能，讓大家能知道哪些車廂人比較多</p>
+          <p>隨著台灣的疫情逐步趨緩、Covid19流感化，捷報也於今天正式走入歷史，未來我不會再進行任何更新與維護啦，希望捷報在這3年中有幫助到大家！</p>
+          <p class="text-right">2023.02.21 by NorthBei</p>
+        </v-card-text>
+        <v-card-text>
+          <p>2020/05/08時，台北捷運在App中推出了查詢「車廂擁擠度」的功能，讓大家能知道哪些車廂人比較多</p>
           <p>但是說實話，我根本不想下載捷運的App...，所以我就從台北捷運的App中，把這功能拉出來做成獨立服務囉</p>
           <p>希望能讓大家方便一些，也讓我為台灣的防疫盡一份心力哈哈</p>
           <p>BTW 目前台北捷運只有開放查詢「板南線」擁擠程度的功能而已，其他路線暫時還沒辦法</p>
           <p class="text-right">2020.05.11 by NorthBei</p>
         </v-card-text>
-        <p class="text-center">有任何問題，填個<a :href="formUrl" target="_blank">表單</a>跟我說吧</p>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="primary" text @click="dialog.info = false">OK</v-btn>
@@ -107,7 +107,7 @@
           <p>哈囉~ 你好啊</p>
           <p>你點開了這個視窗，想必是有事情要跟我說吧</p>
           <p>如果我猜對了的話，把信寄到下面的Email就可以溜😊</p>
-          <p>hello@metrocrowd.online</p>
+          <p>northbeic@gmail.com</p>
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -125,7 +125,6 @@ import { detect } from 'detect-browser'
 const browser = detect()
 const browserInfo = browser ? `${browser.os}, ${browser.name}, ${browser.version}` : 'None'
 
-const formUrl = 'https://forms.gle/5B6FoDBLMEQdMbJKA'
 const stations = {
   BL01: '頂埔',
   BL02: '永寧',
@@ -154,7 +153,6 @@ const stations = {
 
 export default {
   data: () => ({
-    formUrl: formUrl,
     dialog: {
       info: false,
       email: false
